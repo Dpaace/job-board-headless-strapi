@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "singularName": "job",
+    "pluralName": "jobs",
+    "displayName": "job"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "vacancy": {
+      "type": "string"
+    },
+    "recruiter": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "email": {
+      "type": "email"
+    },
+    "salary": {
+      "type": "integer"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "jobs"
+    }
+  }
+}
