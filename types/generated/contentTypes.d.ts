@@ -904,18 +904,15 @@ export interface ApiGemelloNewGemelloNew extends Schema.CollectionType {
   info: {
     singularName: 'gemello-new';
     pluralName: 'gemello-news';
-    displayName: 'Gemello_new';
+    displayName: 'Gemello News';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String;
-    owner: Attribute.String;
-    assetbundle: Attribute.Media<
-      'images' | 'videos' | 'audios' | 'files',
-      true
-    >;
+    title: Attribute.String & Attribute.Required;
+    file: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

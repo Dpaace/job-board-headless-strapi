@@ -4,7 +4,8 @@
   "info": {
     "singularName": "gemello-new",
     "pluralName": "gemello-news",
-    "displayName": "Gemello_new"
+    "displayName": "Gemello News",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,17 +13,15 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
-    "owner": {
-      "type": "string"
-    },
-    "assetbundle": {
+    "file": {
       "allowedTypes": [
         "images",
+        "files",
         "videos",
-        "audios",
-        "files"
+        "audios"
       ],
       "type": "media",
       "multiple": true
