@@ -899,6 +899,41 @@ export interface ApiGemelloGemello extends Schema.CollectionType {
   };
 }
 
+export interface ApiGemelloNewGemelloNew extends Schema.CollectionType {
+  collectionName: 'gemello_news';
+  info: {
+    singularName: 'gemello-new';
+    pluralName: 'gemello-news';
+    displayName: 'Gemello_new';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    owner: Attribute.String;
+    assetbundle: Attribute.Media<
+      'images' | 'videos' | 'audios' | 'files',
+      true
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::gemello-new.gemello-new',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::gemello-new.gemello-new',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiJobJob extends Schema.CollectionType {
   collectionName: 'jobs';
   info: {
@@ -953,6 +988,7 @@ declare module '@strapi/types' {
       'api::category.category': ApiCategoryCategory;
       'api::folder-image.folder-image': ApiFolderImageFolderImage;
       'api::gemello.gemello': ApiGemelloGemello;
+      'api::gemello-new.gemello-new': ApiGemelloNewGemelloNew;
       'api::job.job': ApiJobJob;
     }
   }

@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gemello_news",
+  "info": {
+    "singularName": "gemello-new",
+    "pluralName": "gemello-news",
+    "displayName": "Gemello_new"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "assetbundle": {
+      "allowedTypes": [
+        "images",
+        "videos",
+        "audios",
+        "files"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
