@@ -72,6 +72,11 @@
     "lastname": {
       "type": "string",
       "maxLength": 100
+    },
+    "gemellos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::gemello.gemello"
     }
   }
 }

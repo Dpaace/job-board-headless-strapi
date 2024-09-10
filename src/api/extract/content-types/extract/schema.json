@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "extracts",
+  "info": {
+    "singularName": "extract",
+    "pluralName": "extracts",
+    "displayName": "extract"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "assets": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
